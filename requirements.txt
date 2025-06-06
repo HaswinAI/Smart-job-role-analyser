@@ -5,3 +5,4 @@ pandas==2.2.2
 PyMuPDF==1.23.9
 joblib==1.4.2
 nltk==3.8.1
+gunicorn==19.7.1
