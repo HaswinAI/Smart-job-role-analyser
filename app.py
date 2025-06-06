@@ -47,9 +47,15 @@ def predict():
     if not file.filename.lower().endswith('.pdf'):
         return "Invalid file format. Please upload a PDF.", 400
 
+    # Ensure uploads directory exists
+    os.makedirs("uploads", exist_ok=True)
+
     # Save the uploaded file
     filepath = os.path.join("uploads", file.filename)
     file.save(filepath)
+
+    # ... rest of your code ...
+
 
     # Extract text from the PDF using PyMuPDF
     text = extract_text_from_pdf(filepath)
